@@ -57,41 +57,13 @@ adb devices
 ## Проверка Appium
 appium --version
 
-# Структура проекта
-automation-project/
-├── src/
-│   ├── main/java/org/example/
-│   │   ├── RunMobileTest.java      # Основной тестовый класс
-│   │   └── ...
-│   └── test/
-│       ├── java/                   # Тестовые классы
-│       └── resources/
-│           ├── testng-web.xml      # Конфигурация для веб-тестов
-│           ├── testng-mobile.xml   # Конфигурация для мобильных тестов
-│           └── testng-all.xml      # Конфигурация для всех тестов
-├── target/                         # Скомпилированные файлы
-├── pom.xml                         # Конфигурация Maven
-└── README.md                       # Документация
 # Запуск тестов
-## Вариант 1: Через Maven
-Запуск всех тестов
-mvn test
 
-Запуск только мобильных тестов
-mvn test -Pmobile-tests
-
-Запуск только веб-тестов
-mvn test -Pweb-tests
-
-Запуск с конкретным TestNG файлом
-mvn test -Dsurefire.suiteXmlFiles=src/test/resources/testng-mobile.xml
-
-## Вариант 2: Через IntelliJ IDEA
+## Вариант 1: Через IntelliJ IDEA
 - Откройте проект в IntelliJ IDEA
 - Запустите RunMobileTest.java как Java Application
-- Или запустите через TestNG конфигурацию
 
-## Вариант 3: Через командную строку
+## Вариант 2: Через командную строку
 Сначала запустите Appium Server
 appium
 
